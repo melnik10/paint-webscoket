@@ -1,0 +1,19 @@
+{
+  "name": "paint-websocket-cs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melnik10/paint-websocket.git"
+  },
+  "author": "Melnikov V.A. <https://github.com/melnik10>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melnik10/paint-websocket/issues"
+  },
+  "homepage": "https://github.com/melnik10/paint-websocket#readme"
+}
