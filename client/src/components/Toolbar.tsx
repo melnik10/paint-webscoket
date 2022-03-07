@@ -16,6 +16,16 @@ const ToolBar: FC = () => {
             ToolState.setTool(new ToolClass(CanvasState.canvas, CanvasState.socket, CanvasState.sessionId))
         }
     }
+    const download = () => {
+        const canvas = canvasState.canvas
+        const data = canvas?.toDataURL()
+        const a = document.createElement('a')
+        a.href = data || ''
+        a.download = canvasState.sessionId + '.jpg'
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+    }
     return (
         <div className={'toolBar'}>
             <button className={'toolBar_btn brush'} onClick={() => onToolClickHandler(Brush)}></button>
@@ -26,7 +36,7 @@ const ToolBar: FC = () => {
             <input type={"color"} onChange={(e) => toolState.setFillColor(e.target.value)}></input>
             <button className={'toolBar_btn undo'} onClick={() => canvasState.undo()}></button>
             <button className={'toolBar_btn redo'} onClick={() => canvasState.redo()}></button>
-            <button className={'toolBar_btn save'}></button>
+            <button className={'toolBar_btn save'} onClick={() => download()}></button>
         </div>
     );
 };

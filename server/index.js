@@ -31,6 +31,10 @@ app.post('/image', (req, res) => {
     try {
         const img = req.body.img.replace('data:image/png;base64,', '')
         if(req.query.id) {
+            if(!fs.existsSync(path.resolve(__dirname, 'files'))) {
+                console.log('no path')
+                fs.mkdir(path.resolve(__dirname, 'files'), () => console.log('create dir files'))
+            }
             fs.writeFileSync(path.resolve(__dirname, 'files', `${req.query.id}.jpg`),img, 'base64')
         }
     } catch (e) {

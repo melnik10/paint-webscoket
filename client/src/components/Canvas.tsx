@@ -26,16 +26,16 @@ const Canvas: FC = observer(() => {
                     id: params.id
                 }
             }).then(res => {
-                    const img = new Image()
-                    img.src = res.data.img
-                    img.onload = (() => {
-                        if(canvasRef.current) {
-                            const ctx = canvasRef.current?.getContext('2d')
-                            ctx?.drawImage(img, 0, 0, canvasRef.current.width, canvasRef.current?.height)
-                            ctx?.beginPath()
-                            ctx?.stroke()
-                        }
-                    })
+                const img = new Image()
+                img.src = res.data.img
+                img.onload = (() => {
+                    if (canvasRef.current) {
+                        const ctx = canvasRef.current?.getContext('2d')
+                        ctx?.drawImage(img, 0, 0, canvasRef.current.width, canvasRef.current?.height)
+                        ctx?.beginPath()
+                        ctx?.stroke()
+                    }
+                })
             })
         }
     }, [])
@@ -62,7 +62,6 @@ const Canvas: FC = observer(() => {
                 let msg = JSON.parse(e.data)
                 switch (msg.method) {
                     case 'connection':
-                        console.log(msg.message)
                         break
                     case 'draw':
                         drawHandler(msg)

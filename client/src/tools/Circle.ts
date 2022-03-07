@@ -39,7 +39,7 @@ export default class Circle extends Figure {
         ctx.ellipse(x, y, Math.abs(w),Math.abs(w),0,0,360)
         ctx.strokeStyle = figure.strokeStyle
         ctx.fillStyle = figure.fillStyle
-        ctx.lineWidth = figure
+        ctx.lineWidth = figure.lineWidth
         ctx.fill()
         ctx.stroke()
     }
