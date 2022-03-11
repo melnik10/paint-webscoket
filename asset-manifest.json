@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/paint-websocket/static/css/main.a478cc1c.css",
-    "main.js": "/paint-websocket/static/js/main.b38ee78b.js",
+    "main.js": "/paint-websocket/static/js/main.a8e69769.js",
     "index.html": "/paint-websocket/index.html",
     "main.a478cc1c.css.map": "/paint-websocket/static/css/main.a478cc1c.css.map",
-    "main.b38ee78b.js.map": "/paint-websocket/static/js/main.b38ee78b.js.map"
+    "main.a8e69769.js.map": "/paint-websocket/static/js/main.a8e69769.js.map"
   },
   "entrypoints": [
     "static/css/main.a478cc1c.css",
-    "static/js/main.b38ee78b.js"
+    "static/js/main.a8e69769.js"
   ]
 }
